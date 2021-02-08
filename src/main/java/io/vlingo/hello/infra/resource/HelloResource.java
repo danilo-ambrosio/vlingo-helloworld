@@ -28,7 +28,6 @@ public class HelloResource extends DynamicResourceHandler {
   }
 
   public Completes<Response> helloWhom(String whom) {
-    logger().error("Ops");
     return Completes.withSuccess(Response.of(Ok, Hello.replace("#", whom)));
   }
 
